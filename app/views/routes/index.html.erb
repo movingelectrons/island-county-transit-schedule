@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Routes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routes.each do |route| %>
+      <tr>
+        <td><%= link_to route.name, route %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

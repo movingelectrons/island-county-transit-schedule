@@ -1,0 +1,9 @@
+%p{:id=>"notice"}= notice
+
+%h1= @route.name
+
+%table
+  %th
+    - @route.stops.each do |stop|
+      %tr= stop.name
+

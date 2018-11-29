@@ -1,0 +1,13 @@
+# To use the locales, use `I18n.t`:
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#     I18n.locale = :es
+#
+# http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello"
