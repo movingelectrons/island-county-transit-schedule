@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181129062610) do
+ActiveRecord::Schema.define(version: 20181129115055) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 20181129062610) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "schedules", force: :cascade do |t|
-    t.integer  "stop_id"
-    t.string   "time"
+  create_table "runs", force: :cascade do |t|
+    t.integer  "route_id"
+    t.string   "times"
     t.integer  "index"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
