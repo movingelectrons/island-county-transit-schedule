@@ -1,12 +1,16 @@
 %p{:id=>"notice"}= notice
 
+%select{:id=>"route"}
+  - Route.all.each do |route|
+    %option= route.name
+
 %h1= @route.name
 
 %table
   %tbody
     %tr
-      - @route.stops.each do |stop|
-        %th= stop.name.html_safe
+      - @route.stop.names.split(",").each do |stop|
+        %th= stop.html_safe
     - @route.runs.each do |run|
       %tr
         - run.times.split(",").each do |s|

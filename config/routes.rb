@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   #get 'routes' => 'routes#index'
   #get 'routes/:id' => 'routes#show'
   resources :routes
+  root 'routes#index'
   ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation: first created -> highest priority.

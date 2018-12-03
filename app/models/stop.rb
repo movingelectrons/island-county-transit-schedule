@@ -1,3 +1,4 @@
 class Stop < ActiveRecord::Base
-  has_many :schedules
+  belongs_to :route
+  has_many :runs
 end
