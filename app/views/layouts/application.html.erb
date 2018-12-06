@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IslandTransitSchedule</title>
+  <title>Island County Transit Schedule</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<h1>Island County Transit Schedule</h1>
+
+<div id="main_content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

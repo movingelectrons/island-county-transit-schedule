@@ -1,17 +1,23 @@
 %p{:id=>"notice"}= notice
 
-%select{:id=>"route"}
-  - Route.all.each do |route|
-    %option= route.name
+%div{:id=>'breadcrumb'}
+  %a{:class=>'breadcrumb', :href=>'/routes'}
+    %h2{:class=>'breadcrumb'}
+      Routes
+  %h2{:class=>'breadcrumb'}
+    >
+  %h2{:class=>'breadcrumb'}= @route.name.html_safe
 
-%h1= @route.name
 
 %table
-  %tbody
+  %thead
     %tr
       - @route.stop.names.split(",").each do |stop|
-        %th= stop.html_safe
+        %th{:class=>'stops'}= stop.html_safe
+  %tbody
     - @route.runs.each do |run|
-      %tr
+      %tr{:class=>cycle('even', 'odd')}
         - run.times.split(",").each do |s|
           %td= s
+
+%h3= @route.note.html_safe

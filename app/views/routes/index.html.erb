@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Routes</h1>
-
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Routes</th>
     </tr>
   </thead>
 
   <tbody>
     <% @routes.each do |route| %>
-      <tr>
-        <td><%= link_to route.name, route %></td>
+      <tr class="<%= cycle('even', 'odd') -%>">
+        <td><%= link_to route.name.html_safe, route %></td>
       </tr>
     <% end %>
   </tbody>

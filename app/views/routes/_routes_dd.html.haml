@@ -1,0 +1,4 @@
+%select{:id=>"route"}
+  - Route.all.each do |route|
+    %option= route.name
+

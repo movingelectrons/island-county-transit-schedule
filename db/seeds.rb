@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Route.create([
-  {name:'1S - Oak Harbor => Clinton Ferry',note:'*Take Route 6 & transfer to Route 1 Southbound at Coupeville P&R ast 9:55 AM.<br/>N - No service to downtown Coupeville (Broadway, Coveland, or N. Main).',index:1},
-  {name:'1N - Clinton Ferry => Oak Harbor',note:'*Transfer to Route 6 at Coupeville P&R for continued service toward Oak Harbor.<br/>CC - Service provided by Clinton Commuter. Clinton Commuter connects with ferry upon arrival at dock<br/><br/>FERRY CONNECTIONS: Route 1N will only hold more than 5 minutes past the sheduled departure time
+  {name:'1S - Oak Harbor &rarr; Clinton Ferry',note:'*Take Route 6 & transfer to Route 1 Southbound at Coupeville P&R ast 9:55 AM.<br/>N - No service to downtown Coupeville (Broadway, Coveland, or N. Main).',index:1},
+  {name:'1N - Clinton Ferry &rarr; Oak Harbor',note:'*Transfer to Route 6 at Coupeville P&R for continued service toward Oak Harbor.<br/>CC - Service provided by Clinton Commuter. Clinton Commuter connects with ferry upon arrival at dock<br/><br/>FERRY CONNECTIONS: Route 1N will only hold more than 5 minutes past the sheduled departure time
 if the ferry is actively landing. During Summer months, ferries tend to run late. Please plan your trip accordingly',index:2}
   #{name:'57 Southbound',index:99}
 ])
 
-r1s = Route.find_by_name("1S - Oak Harbor => Clinton Ferry")
+r1s = Route.find_by_name("1S - Oak Harbor &rarr; Clinton Ferry")
 Stop.create([
   {route_id:r1s.id,names:'Depart<br>Harbor<br>Station,Walmart,Coupeville<br>Elementary,Greenbank,SR 525 at<br>Classic<br>Rd,Smugglers<br>Cove<br>at SW State<br>Park,Freeland<br>Main St<br>at Corey<br>Oil,Bayview<br>P&R,SR 525 at<br>Cultis<br>Bay,Clinton<br>P&R,Clinton<br>Ferry'
   }])
@@ -27,7 +27,7 @@ Run.create([
   {route_id:r1s.id,times:"6:30,6:34,6:55,7:12,7:15,-,7:20,7:27,7:33,7:38,7:42",index:7},
   {route_id:r1s.id,times:"7:30,7:34,7:55,8:12,8:15,-,8:20,8:27,8:34,8:38,8:42",index:8},
   {route_id:r1s.id,times:"8:30,8:34,8:55,9:12,-,9:19,9:30,9:37,9:43,9:48,9:51",index:9},
-  {route_id:r1s.id,times:"*9:30(take Rt.6),-,9:55,10:12,-,10:19,10:30,10:37,10:43,10:48,10:51",index:10},
+  {route_id:r1s.id,times:"*9:30,-,9:55,10:12,-,10:19,10:30,10:37,10:43,10:48,10:51",index:10},
   {route_id:r1s.id,times:"10:30,10:34,10:55,11:12,-,11:19,11:30,11:37,11:43,11:48,11:51",index:11},
   {route_id:r1s.id,times:"11:30,11:34,11:55,12:12,-,12:19,12:30,12:37,12:43,12:48,12:51",index:12},
   {route_id:r1s.id,times:"12:30,12:34,12:55,1:12,-,1:19,1:30,1:37,1:43,1:48,1:51",index:13},
@@ -41,7 +41,7 @@ Run.create([
   {route_id:r1s.id,times:"8:15,8:19,8:40, , , , , , , , ",index:21}
 ])
 
-r1n = Route.find_by_name("1N - Clinton Ferry => Oak Harbor")
+r1n = Route.find_by_name("1N - Clinton Ferry &rarr; Oak Harbor")
 Stop.create([
   {route_id:r1n.id,names:
    'Depart<br>Clinton<br>Ferry,Clinton<br>P&R,Humphrey<br>Rd P&R,SR 525 at<br>Langley<br>Rd,Bayview<br>P&R,Freeland<br>Main St<br>at WiFire,Greenbank<br>at/SR 525,Coupeville<br>P&R,Monroe/<br>Arnold,Walmart,Harbor<br>Station'
